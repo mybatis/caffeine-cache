@@ -57,9 +57,7 @@ public final class CaffeineCacheAdapter implements Cache {
 
 	@Override
 	public Object removeObject(Object key) {
-		Object object = getObject(key);
-		this.cache.invalidate(key);
-		return object;
+		return this.cache.asMap().remove(key);
 	}
 
 	@Override
