@@ -7,10 +7,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="The MyBatis Team" />
     <meta name="Date-Revision-yyyymmdd" content="20160407" />
     <meta http-equiv="Content-Language" content="en" />
-    <title>MyBatis &#x2013; MyBatis Caffeine | Reference Documentation</title>
+    <title>MyBatis &#x2013; Dependency Information</title>
     <link rel="stylesheet" href="./css/apache-maven-fluido-1.4.min.css" />
     <link rel="stylesheet" href="./css/site.css" />
     <link rel="stylesheet" href="./css/print.css" media="print" />
@@ -31,7 +30,7 @@
                 <h2>mybatis-caffeine</h2>
                 </div>
                       </div>
-        <div class="pull-right">                                <a href="../" id="bannerRight" title="MyBatis logo">
+        <div class="pull-right">                                <a href="../../" id="bannerRight" title="MyBatis logo">
                                                                                         <img src="http://mybatis.github.io/images/mybatis-logo.png"  alt="MyBatis logo"/>
                 </a>
       </div>
@@ -63,10 +62,12 @@
                 <ul class="nav nav-list">
                     <li class="nav-header">Reference Documentation</li>
                               
-      <li class="active">
+      <li>
   
-            <a href="#"><span class="none"></span>Introduction</a>
-          </li>
+                          <a href="index.html" title="Introduction">
+          <span class="none"></span>
+        Introduction</a>
+            </li>
                               <li class="nav-header">Project Documentation</li>
                                                                                                                                                                                                                                                                                                                   
       <li>
@@ -90,12 +91,10 @@
         Dependencies</a>
             </li>
                     
-      <li>
+      <li class="active">
   
-                          <a href="dependency-info.html" title="Dependency Information">
-          <span class="none"></span>
-        Dependency Information</a>
-            </li>
+            <a href="#"><span class="none"></span>Dependency Information</a>
+          </li>
                     
       <li>
   
@@ -104,10 +103,12 @@
         Distribution Management</a>
             </li>
                     
-      <li class="active">
+      <li>
   
-            <a href="#"><span class="none"></span>About</a>
-          </li>
+                          <a href="index.html" title="About">
+          <span class="none"></span>
+        About</a>
+            </li>
                     
       <li>
   
@@ -194,136 +195,37 @@
                 
         <div id="bodyColumn"  class="span10" >
                                   
-            <!-- Copyright 2010-2012 The MyBatis Team
-
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License. --><!-- version: $Id$ -->
-
-  
-    <div class="section">
-<h2><a name="MyBatis_Caffeine_integration_-_Reference_Documentation"></a>MyBatis Caffeine integration - Reference Documentation</h2>
-
-            
-<p><a class="externalLink" href="https://github.com/ben-manes/caffeine">Caffeine</a> is an open source clustering
-            and highly scalable data distribution platform for Java.</p>
-            
-            
-<p>Users that want to use Caffeine into their applications, have to download the
-            <a class="externalLink" href="https://github.com/ben-manes/caffeine/releases">zip bundle</a>,
-            decompress it and add the jars in the classpath.
-            Apache Maven users instead can simply add in the <tt>pom.xml</tt> the following dependency:</p>
-            
-            
-<div class="source"><pre class="prettyprint">&lt;dependencies&gt;
-  ...
-  &lt;dependency&gt;
-    &lt;groupId&gt;org.mybatis.caches&lt;/groupId&gt;
-    &lt;artifactId&gt;mybatis-caffeine&lt;/artifactId&gt;
-    &lt;version&gt;x.x.x&lt;/version&gt;
-  &lt;/dependency&gt;
-  ...
-&lt;/dependencies&gt;</pre></div>
-
-            
-<p>then, just configure it in the mapper XML</p>
-            
-<div class="source"><pre class="prettyprint">&lt;mapper namespace=&quot;org.acme.FooMapper&quot;&gt;
-
-  &lt;cache type=&quot;org.mybatis.caches.caffeine.CaffeineCache/&gt;
-
-  ...
-
-&lt;/mapper&gt;</pre></div>
-
-		
+            <div class="section">
+<h2><a name="Dependency_Information"></a>Dependency Information</h2><a name="Dependency_Information"></a>
 <div class="section">
-<h3><a name="Requirements"></a>Requirements</h3>
-		    
-<p>
-		      Follows below the version requirements:
-		    </p>
-			
-<table border="0" class="table table-striped">
-				<thead>
-					
-<tr class="a">
-						
-<th>
-							MyBatis-Caffeine
-						</th>
-						
-<th>
-							Caffeine
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-					
-<tr class="b">
-						
-<td>
-							1.0.x
-						</td>
-						
-<td>
-							2.2.x
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		  </div>
-
-		  
+<h3><a name="Apache_Maven"></a>Apache Maven</h3><a name="Apache_Maven"></a>
+<div class="source"><pre class="prettyprint">&lt;dependency&gt;
+  &lt;groupId&gt;org.mybatis.caches&lt;/groupId&gt;
+  &lt;artifactId&gt;mybatis-caffeine&lt;/artifactId&gt;
+  &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+&lt;/dependency&gt;</pre></div></div>
 <div class="section">
-<h3><a name="Adapters"></a>Adapters</h3>
-
-            
-<p>There are just one Caffeine cache adapters.</p>
-            
-            
-<table border="0" class="table table-striped">
-            <thead>
-            
-<tr class="a">
-              
-<th>Bean</th>
-              
-<th>Description</th>
-            </tr>
-            </thead>
-            <tbody>
-            
-<tr class="b">
-              
-<td><tt>org.mybatis.caches.caffeine.CaffeineCache</tt></td>
-              
-<td>No-logging adapter.</td>
-            </tr>
-            </tbody>
-            </table>
-            
-            
-<p>Logging versions of the adapter log cache hit ratios using the namespace as a looger.</p>
-            
-            
-<p>Please refer to the official
-            <a class="externalLink" href="https://github.com/ben-manes/caffeine/wiki">documentation</a>
-            to know more details how to configure Caffeine as Cache.</p>
-            </div>
-            
-        </div>
-    
-
-
+<h3><a name="Apache_Buildr"></a>Apache Buildr</h3><a name="Apache_Buildr"></a>
+<div class="source"><pre class="prettyprint">'org.mybatis.caches:mybatis-caffeine:jar:1.0-SNAPSHOT'</pre></div></div>
+<div class="section">
+<h3><a name="Apache_Ivy"></a>Apache Ivy</h3><a name="Apache_Ivy"></a>
+<div class="source"><pre class="prettyprint">&lt;dependency org=&quot;org.mybatis.caches&quot; name=&quot;mybatis-caffeine&quot; rev=&quot;1.0-SNAPSHOT&quot;&gt;
+  &lt;artifact name=&quot;mybatis-caffeine&quot; type=&quot;jar&quot; /&gt;
+&lt;/dependency&gt;</pre></div></div>
+<div class="section">
+<h3><a name="Groovy_Grape"></a>Groovy Grape</h3><a name="Groovy_Grape"></a>
+<div class="source"><pre class="prettyprint">@Grapes(
+@Grab(group='org.mybatis.caches', module='mybatis-caffeine', version='1.0-SNAPSHOT')
+)</pre></div></div>
+<div class="section">
+<h3><a name="Grails"></a>Grails</h3><a name="Grails"></a>
+<div class="source"><pre class="prettyprint">compile 'org.mybatis.caches:mybatis-caffeine:1.0-SNAPSHOT'</pre></div></div>
+<div class="section">
+<h3><a name="Leiningen"></a>Leiningen</h3><a name="Leiningen"></a>
+<div class="source"><pre class="prettyprint">[org.mybatis.caches/mybatis-caffeine &quot;1.0-SNAPSHOT&quot;]</pre></div></div>
+<div class="section">
+<h3><a name="SBT"></a>SBT</h3><a name="SBT"></a>
+<div class="source"><pre class="prettyprint">libraryDependencies += &quot;org.mybatis.caches&quot; % &quot;mybatis-caffeine&quot; % &quot;1.0-SNAPSHOT&quot;</pre></div></div></div>
                   </div>
             </div>
           </div>
