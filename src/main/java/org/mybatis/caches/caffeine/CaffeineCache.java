@@ -25,13 +25,13 @@ import java.util.concurrent.locks.ReadWriteLock;
  *
  * @author Eddú Meléndez
  */
-public final class CaffeineCacheAdapter implements Cache {
+public final class CaffeineCache implements Cache {
 
   private com.github.benmanes.caffeine.cache.Cache<Object, Object> cache;
 
   private String id;
 
-  public CaffeineCacheAdapter(String id) {
+  public CaffeineCache(String id) {
     if (id == null) {
       throw new IllegalArgumentException("Cache instances require an ID");
     }

@@ -21,20 +21,20 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
-public class CaffeineCacheAdapterTest {
+public class CaffeineCacheTest {
 
   private static final String DEFAULT_ID = "Caffeine";
 
-  private CaffeineCacheAdapter cache;
+  private CaffeineCache cache;
 
   @Before
   public void setup() {
-    this.cache = new CaffeineCacheAdapter(DEFAULT_ID);
+    this.cache = new CaffeineCache(DEFAULT_ID);
   }
 
   @Test(expected = IllegalArgumentException.class)
   public void shouldNotCreateCache() {
-    this.cache = new CaffeineCacheAdapter(null);
+    this.cache = new CaffeineCache(null);
   }
 
   @Test
