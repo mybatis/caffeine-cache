@@ -15,6 +15,32 @@
   <artifactId>mybatis-caffeine</artifactId>
   <version>1.0-SNAPSHOT</version>
 
+  <name>mybatis-caffeine</name>
+  <description>Caffeine support for MyBatis Cache</description>
+  <url>http://www.mybatis.org/caches/caffeine/</url>
+
+  <scm>
+    <url>http://github.com/mybatis/caffeine-cache</url>
+    <connection>scm:git:ssh://github.com/mybatis/caffeine-cache.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/mybatis/caffeine-cache.git</developerConnection>
+    <tag>HEAD</tag>
+  </scm>
+  <issueManagement>
+    <system>GitHub Issue Management</system>
+    <url>https://github.com/mybatis/caffeine-cache/issues</url>
+  </issueManagement>
+  <ciManagement>
+    <system>Travis CI</system>
+    <url>https://travis-ci.org/caffeine-cache/guice</url>
+  </ciManagement>
+  <distributionManagement>
+    <site>
+      <id>gh-pages</id>
+      <name>Mybatis GitHub Pages</name>
+      <url>git:ssh://git@github.com/mybatis/caffeine-cache.git?gh-pages#</url>
+    </site>
+  </distributionManagement>
+
   <dependencies>
     <dependency>
       <groupId>org.mybatis</groupId>
