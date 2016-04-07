@@ -31,7 +31,7 @@
   </issueManagement>
   <ciManagement>
     <system>Travis CI</system>
-    <url>https://travis-ci.org/caffeine-cache/guice</url>
+    <url>https://travis-ci.org/mybatis/caffeine-cache</url>
   </ciManagement>
   <distributionManagement>
     <site>
