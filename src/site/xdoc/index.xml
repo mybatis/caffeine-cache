@@ -51,7 +51,7 @@
             <p>then, just configure it in the mapper XML</p>
             <source><![CDATA[<mapper namespace="org.acme.FooMapper">
 
-  <cache type="org.mybatis.caches.caffeine.CaffeineCache/>
+  <cache type="org.mybatis.caches.caffeine.CaffeineCache"/>
 
   ...
 
