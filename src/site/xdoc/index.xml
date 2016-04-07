@@ -23,18 +23,18 @@
   xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
 
   <properties>
-    <title>MyBatis Hazelcast | Reference Documentation</title>
+    <title>MyBatis Caffeine | Reference Documentation</title>
     <author email="mybatis-dev@googlegroups.com">The MyBatis Team</author>
   </properties>
 
   <body>
-    <section name="MyBatis Hazelcast integration - Reference Documentation">
+    <section name="MyBatis Caffeine integration - Reference Documentation">
 
-            <p><a href="http://www.hazelcast.com/">Hazelcast</a> is an open source clustering 
+            <p><a href="https://github.com/ben-manes/caffeine">Caffeine</a> is an open source clustering
             and highly scalable data distribution platform for Java.</p>
             
-            <p>Users that want to use Hazelcast into their applications, have to download the
-            <a href="https://github.com/mybatis/hazelcast-cache/releases">zip bundle</a>, 
+            <p>Users that want to use Caffeine into their applications, have to download the
+            <a href="https://github.com/ben-manes/caffeine/releases">zip bundle</a>,
             decompress it and add the jars in the classpath.
             Apache Maven users instead can simply add in the <code>pom.xml</code> the following dependency:</p>
             
@@ -42,7 +42,7 @@
   ...
   <dependency>
     <groupId>org.mybatis.caches</groupId>
-    <artifactId>mybatis-hazelcast</artifactId>
+    <artifactId>mybatis-caffeine</artifactId>
     <version>x.x.x</version>
   </dependency>
   ...
@@ -51,7 +51,7 @@
             <p>then, just configure it in the mapper XML</p>
             <source><![CDATA[<mapper namespace="org.acme.FooMapper">
 
-  <cache type="org.mybatis.caches.hazelcast.LoggingHazelcastCache"/>
+  <cache type="org.mybatis.caches.caffeine.CaffeineCache/>
 
   ...
 
@@ -65,10 +65,10 @@
 				<thead>
 					<tr>
 						<th>
-							MyBatis-Hazelcast
+							MyBatis-Caffeine
 						</th>
 						<th>
-							Hazelcast
+							Caffeine
 						</th>
 					</tr>
 				</thead>
@@ -78,15 +78,7 @@
 							1.0.x
 						</td>
 						<td>
-							2.x
-						</td>
-					</tr>
-					<tr>
-						<td>
-							1.1.x
-						</td>
-						<td>
-							3.x
+							2.2.x
 						</td>
 					</tr>
 				</tbody>
@@ -95,7 +87,7 @@
 
 		  <subsection name="Adapters">
 
-            <p>There are four Hazelcast cache adapters.</p>
+            <p>There are just one Caffeine cache adapters.</p>
             
             <table>
             <thead>
@@ -106,20 +98,8 @@
             </thead>
             <tbody>
             <tr>
-              <td><code>org.mybatis.caches.hazelcast.HazelcastCache</code></td>
+              <td><code>org.mybatis.caches.caffeine.CaffeineCache</code></td>
               <td>No-logging adapter.</td>
-            </tr>
-            <tr>
-              <td><code>org.mybatis.caches.hazelcast.LoggingHazelcastCache</code></td>
-              <td>Hazelcast cache with logging capabilities. If not sure which to choose then use this one.</td>
-            </tr>
-            <tr>
-              <td><code>org.mybatis.caches.hazelcast.HazelcastClientCache</code></td>
-              <td>Cache adapter for Hazelcast using "Hazelcast Client" API.</td>
-            </tr>
-            <tr>
-              <td><code>org.mybatis.caches.hazelcast.LoggingHazelcastClientCache</code></td>
-              <td>Same than the previous but with logging capabilities.</td>
             </tr>
             </tbody>
             </table>
@@ -127,8 +107,8 @@
             <p>Logging versions of the adapter log cache hit ratios using the namespace as a looger.</p>
             
             <p>Please refer to the official
-            <a href="http://www.hazelcast.com">documentation</a>
-            to know more details how to configure Hazelcast as Cache.</p>
+            <a href="https://github.com/ben-manes/caffeine/wiki">documentation</a>
+            to know more details how to configure Caffeine as Cache.</p>
             </subsection>
             
         </section>
