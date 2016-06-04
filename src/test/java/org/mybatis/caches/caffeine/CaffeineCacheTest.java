@@ -18,8 +18,7 @@ package org.mybatis.caches.caffeine;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class CaffeineCacheTest {
 
@@ -39,24 +38,24 @@ public class CaffeineCacheTest {
 
   @Test
   public void shouldVerifyCacheId() {
-    assertEquals(DEFAULT_ID, this.cache.getId());
+    assertThat(DEFAULT_ID).isEqualTo(this.cache.getId());
   }
 
   @Test
   public void shouldPersistObject() {
     this.cache.putObject(1, "foo");
-    assertEquals("foo", this.cache.getObject(1));
+    assertThat(this.cache.getObject(1)).isEqualTo("foo");
   }
 
   @Test
   public void shouldRemoveObject() {
     this.cache.putObject(1, "foo");
 
-    assertEquals("foo", this.cache.getObject(1));
+    assertThat(this.cache.getObject(1)).isEqualTo("foo");
 
     this.cache.removeObject(1);
 
-    assertNull(this.cache.getObject(1));
+    assertThat(this.cache.getObject(1)).isNull();
   }
 
   @Test
@@ -64,13 +63,13 @@ public class CaffeineCacheTest {
     this.cache.putObject(1, "foo");
     this.cache.putObject(2, "bar");
 
-    assertEquals("foo", this.cache.getObject(1));
-    assertEquals("bar", this.cache.getObject(2));
+    assertThat(this.cache.getObject(1)).isEqualTo("foo");
+    assertThat(this.cache.getObject(2)).isEqualTo("bar");
 
     this.cache.clear();
 
-    assertNull(this.cache.getObject(1));
-    assertNull(this.cache.getObject(2));
+    assertThat(this.cache.getObject(1)).isNull();
+    assertThat(this.cache.getObject(2)).isNull();
   }
 
   @Test
@@ -78,7 +77,7 @@ public class CaffeineCacheTest {
     this.cache.putObject(1, "foo");
     this.cache.putObject(2, "bar");
 
-    assertEquals(2, this.cache.getSize());
+    assertThat(this.cache.getSize()).isEqualTo(2);
   }
 
 }
