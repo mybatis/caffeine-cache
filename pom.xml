@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-       Copyright 2016 the original author or authors.
+       Copyright 2016-2017 the original author or authors.
 
        Licensed under the Apache License, Version 2.0 (the "License");
        you may not use this file except in compliance with the License.
@@ -34,12 +34,12 @@
 
   <name>mybatis-caffeine</name>
   <description>Caffeine support for MyBatis Cache</description>
-  <url>http://www.mybatis.org/caches/caffeine/</url>
+  <url>https://www.mybatis.org/caches/caffeine/</url>
 
   <inceptionYear>2016</inceptionYear>
 
   <scm>
-    <url>http://github.com/mybatis/caffeine-cache</url>
+    <url>https://github.com/mybatis/caffeine-cache</url>
     <connection>scm:git:ssh://github.com/mybatis/caffeine-cache.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/mybatis/caffeine-cache.git</developerConnection>
     <tag>HEAD</tag>
