@@ -16,9 +16,10 @@
 package org.mybatis.caches.caffeine;
 
 import com.github.benmanes.caffeine.cache.Caffeine;
-import org.apache.ibatis.cache.Cache;
 
 import java.util.concurrent.locks.ReadWriteLock;
+
+import org.apache.ibatis.cache.Cache;
 
 /**
  * Cache adapter for Caffeine.
