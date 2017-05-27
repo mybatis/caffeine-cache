@@ -32,6 +32,11 @@ public final class CaffeineCache implements Cache {
 
   private String id;
 
+  /**
+   * Instantiates a new caffeine cache.
+   *
+   * @param id the id
+   */
   public CaffeineCache(String id) {
     if (id == null) {
       throw new IllegalArgumentException("Cache instances require an ID");
