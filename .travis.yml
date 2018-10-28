@@ -1,12 +1,14 @@
 language: java
 sudo: false
+
 jdk:
-- oraclejdk9
+- oraclejdk11
 - oraclejdk8
-- openjdk8
+
 after_success:
 - chmod -R 777 ./travis/after_success.sh
 - ./travis/after_success.sh
+
 env:
   global:
   - secure: qIyX9VepXL8sLLrQoozHsTBKqyXigNH2J+cPiREBAvUAKBxo20rQVCsDiA7qA/6TvFx4xiRQ3ICRW9svwZ8+k5pm0sfan71O84plWz4XwiYc70wi0ijTqJsZx4GuF6d3LpaLsuWjlg0kUzVB9Wu0DlxlCsMcKIc3N/3huQ7SLe8dNzJO5ND6LS2G9A2wsa8ShyiXJufgRk2cVco0Qs9h5rY6icnGplqD9osJe8bypjE3L3rYwSfSy5Ge/hVEDbL63mNN7yDLjkG+sgV8TXzLUTGquQyUhRYsd1OMSUsy/LDNrYoyVNjMQSVLO8W8hM72IrjsGZeUPYMyN6B/cK5WEk94Lz1lN8NuOOdmGbfHKxLRfUxJTQIhfNIp6Vb/EXmgIdBSpcPNhe0IB7WznAzT7yqmMhMRzW/Kjeno32Txf719vCSx8ZMo+e9pCmdfFFLwXK5vDf72EB/XLyNjK0OfmmG2Oq0Wi+tQCMaQkDDQQI3sEzr6QRj/cWoKR8hTs/ZXICkFEp/lvxgYZaKpcUogFEQdadihLgPZq8GM15R/tUbsvbILIHIY6TxMxb2jD8LzLTUKt8oj2I4xKPrW/7dODa4Mqk/WWYlH2ywxGFdm24JDhvLcCsSuZMbJdCaa+5tkwzYreeQgGLDGPkn678g1vuXxcB7xmlRIQXwCKPx4zk4=
