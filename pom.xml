@@ -62,6 +62,7 @@
 
   <properties>
     <clirr.comparisonVersion>1.0.0-SNAPSHOT</clirr.comparisonVersion>
+    <module.name>org.mybatis.caches.caffeine</module.name>
   </properties>
 
   <dependencies>
