@@ -3,7 +3,6 @@ MyBatis caffeine Extension
 
 [![Build Status](https://travis-ci.org/mybatis/caffeine-cache.svg?branch=master)](https://travis-ci.org/mybatis/caffeine-cache)
 [![Coverage Status](https://coveralls.io/repos/github/mybatis/caffeine-cache/badge.svg?branch=master)](https://coveralls.io/github/mybatis/caffeine-cache?branch=master)
-[![Dependency Status](https://www.versioneye.com/user/projects/56ef41bf35630e003e0a7d65/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56ef41bf35630e003e0a7d65)
 [![Maven central](https://maven-badges.herokuapp.com/maven-central/org.mybatis.caches/mybatis-caffeine/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.mybatis.caches/mybatis-caffeine)
 [![License](http://img.shields.io/:license-apache-brightgreen.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 
