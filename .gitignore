@@ -7,3 +7,4 @@ target/
 
 .factorypath
 .mvn/wrapper/maven-wrapper.jar
+release.properties
