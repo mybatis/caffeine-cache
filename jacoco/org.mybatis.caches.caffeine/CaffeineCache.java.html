@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>CaffeineCache.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">mybatis-caffeine</a> &gt; <a href="index.source.html" class="el_package">org.mybatis.caches.caffeine</a> &gt; <span class="el_source">CaffeineCache.java</span></div><h1>CaffeineCache.java</h1><pre class="source lang-java linenums">/**
- *    Copyright 2016 the original author or authors.
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CaffeineCache.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">mybatis-caffeine</a> &gt; <a href="index.source.html" class="el_package">org.mybatis.caches.caffeine</a> &gt; <span class="el_source">CaffeineCache.java</span></div><h1>CaffeineCache.java</h1><pre class="source lang-java linenums">/**
+ *    Copyright 2016-2018 the original author or authors.
  *
  *    Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
  *    you may not use this file except in compliance with the License.
@@ -16,9 +16,10 @@
 package org.mybatis.caches.caffeine;
 
 import com.github.benmanes.caffeine.cache.Caffeine;
-import org.apache.ibatis.cache.Cache;
 
 import java.util.concurrent.locks.ReadWriteLock;
+
+import org.apache.ibatis.cache.Cache;
 
 /**
  * Cache adapter for Caffeine.
@@ -28,52 +29,58 @@ import java.util.concurrent.locks.ReadWriteLock;
 public final class CaffeineCache implements Cache {
 
   private com.github.benmanes.caffeine.cache.Cache&lt;Object, Object&gt; cache;
-<span class="fc" id="L31"></span>
-<span class="fc bfc" id="L32" title="All 2 branches covered.">  private String id;</span>
-<span class="fc" id="L33"></span>
-  public CaffeineCache(String id) {
-    if (id == null) {
-<span class="fc" id="L36">      throw new IllegalArgumentException(&quot;Cache instances require an ID&quot;);</span>
-<span class="fc" id="L37">    }</span>
-<span class="fc" id="L38"></span>
-    this.cache = Caffeine.newBuilder().build();
-    this.id = id;
-  }
-<span class="fc" id="L42"></span>
+
+  private String id;
+
+  /**
+   * Instantiates a new caffeine cache.
+   *
+   * @param id
+   *          the id
+   */
+<span class="fc" id="L41">  public CaffeineCache(String id) {</span>
+<span class="fc bfc" id="L42" title="All 2 branches covered.">    if (id == null) {</span>
+<span class="fc" id="L43">      throw new IllegalArgumentException(&quot;Cache instances require an ID&quot;);</span>
+    }
+
+<span class="fc" id="L46">    this.cache = Caffeine.newBuilder().build();</span>
+<span class="fc" id="L47">    this.id = id;</span>
+<span class="fc" id="L48">  }</span>
+
   @Override
   public String getId() {
-    return this.id;
+<span class="fc" id="L52">    return this.id;</span>
   }
-<span class="fc" id="L47"></span>
-<span class="fc" id="L48">  @Override</span>
+
+  @Override
   public void putObject(Object key, Object value) {
-    this.cache.put(key, value);
-  }
-<span class="fc" id="L52"></span>
+<span class="fc" id="L57">    this.cache.put(key, value);</span>
+<span class="fc" id="L58">  }</span>
+
   @Override
   public Object getObject(Object key) {
-    return this.cache.getIfPresent(key);
+<span class="fc" id="L62">    return this.cache.getIfPresent(key);</span>
   }
-<span class="fc" id="L57"></span>
+
   @Override
   public Object removeObject(Object key) {
-    return this.cache.asMap().remove(key);
+<span class="fc" id="L67">    return this.cache.asMap().remove(key);</span>
   }
-<span class="fc" id="L62"></span>
-<span class="fc" id="L63">  @Override</span>
+
+  @Override
   public void clear() {
-    this.cache.invalidateAll();
-  }
-<span class="fc" id="L67"></span>
+<span class="fc" id="L72">    this.cache.invalidateAll();</span>
+<span class="fc" id="L73">  }</span>
+
   @Override
   public int getSize() {
-    return (int) this.cache.estimatedSize();
+<span class="fc" id="L77">    return (int) this.cache.estimatedSize();</span>
   }
-<span class="nc" id="L72"></span>
+
   @Override
   public ReadWriteLock getReadWriteLock() {
-    return null;
+<span class="nc" id="L82">    return null;</span>
   }
 
 }
-</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>
