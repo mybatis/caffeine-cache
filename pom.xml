@@ -28,7 +28,7 @@
 
   <groupId>org.mybatis.caches</groupId>
   <artifactId>mybatis-caffeine</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1-SNAPSHOT</version>
 
   <name>mybatis-caffeine</name>
   <description>Caffeine support for MyBatis Cache</description>
@@ -40,7 +40,7 @@
     <url>https://github.com/mybatis/caffeine-cache</url>
     <connection>scm:git:ssh://github.com/mybatis/caffeine-cache.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/mybatis/caffeine-cache.git</developerConnection>
-    <tag>mybatis-caffeine-1.0.0</tag>
+    <tag>HEAD</tag>
   </scm>
   <issueManagement>
     <system>GitHub Issue Management</system>
