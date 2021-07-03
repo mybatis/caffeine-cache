@@ -23,11 +23,11 @@ under the License.
     <link>https://www.mybatis.org/caches/caffeine/</link>
     <description>mybatis-caffeine - Checkstyle report</description>
     <language>en-us</language>
-    <copyright>&#169;2016 - 2019 MyBatis.org</copyright>
+    <copyright>&#169;2016 - 2021 MyBatis.org</copyright>
     <item>
-      <title>File: 5,
+      <title>File: 6,
              Errors: 0,
-             Warnings: 0,
+             Warnings: 2,
              Infos: 0
       </title>
             <link>https://www.mybatis.org/caches/caffeine//checkstyle.html</link>
@@ -88,13 +88,27 @@ under the License.
               </tr>
                           <tr>
                 <td>
+                  <a href="https://www.mybatis.org/caches/caffeine//checkstyle.html#target.impsort-maven-cache.properties">target/impsort-maven-cache.properties</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
                   <a href="https://www.mybatis.org/caches/caffeine//checkstyle.html#org.mybatis.caches.caffeine.CaffeineCache.java">org/mybatis/caches/caffeine/CaffeineCache.java</a>
                 </td>
                 <td>
                   0
                 </td>
                 <td>
-                  0
+                  2
                 </td>
                 <td>
                   0

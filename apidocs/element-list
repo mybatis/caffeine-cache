@@ -1,1 +1,2 @@
+module:org.mybatis.caches.caffeine
 org.mybatis.caches.caffeine
