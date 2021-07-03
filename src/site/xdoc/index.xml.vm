@@ -18,7 +18,7 @@
 -->
 <document xmlns="http://maven.apache.org/XDOC/2.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+  xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 https://maven.apache.org/xsd/xdoc-2.0.xsd">
 
   <properties>
     <title>MyBatis Caffeine | Reference Documentation</title>
@@ -28,15 +28,15 @@
   <body>
     <section name="MyBatis Caffeine integration - Reference Documentation">
 
-            <p><a href="https://github.com/ben-manes/caffeine">Caffeine</a> is an open source clustering
+      <p><a href="https://github.com/ben-manes/caffeine">Caffeine</a> is an open source clustering
             and highly scalable data distribution platform for Java.</p>
-            
-            <p>Users that want to use Caffeine into their applications, have to download the
-            <a href="https://github.com/ben-manes/caffeine/releases">zip bundle</a>,
-            decompress it and add the jars in the classpath.
-            Apache Maven users instead can simply add in the <code>pom.xml</code> the following dependency:</p>
-            
-            <source><![CDATA[<dependencies>
+
+      <p>Users that want to use Caffeine into their applications, have to download the
+      <a href="https://github.com/ben-manes/caffeine/releases">zip bundle</a>,
+          decompress it and add the jars in the classpath.
+          Apache Maven users instead can simply add in the <code>pom.xml</code> the following dependency:</p>
+
+          <source><![CDATA[<dependencies>
   ...
   <dependency>
     <groupId>org.mybatis.caches</groupId>
@@ -46,8 +46,8 @@
   ...
 </dependencies>]]></source>
 
-            <p>then, just configure it in the mapper XML</p>
-            <source><![CDATA[<mapper namespace="org.acme.FooMapper">
+      <p>then, just configure it in the mapper XML</p>
+      <source><![CDATA[<mapper namespace="org.acme.FooMapper">
 
   <cache type="org.mybatis.caches.caffeine.CaffeineCache"/>
 
@@ -55,61 +55,69 @@
 
 </mapper>]]></source>
 
-		<subsection name="Requirements">
-		    <p>
-		      Follows below the version requirements:
-		    </p>
-			<table>
-				<thead>
-					<tr>
-						<th>
-							MyBatis-Caffeine
-						</th>
-						<th>
-							Caffeine
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>
-							1.0.x
-						</td>
-						<td>
-							2.2.x
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		  </subsection>
-
-		  <subsection name="Adapters">
-
-            <p>There are just one Caffeine cache adapters.</p>
-            
-            <table>
-            <thead>
+      <subsection name="Requirements">
+        <p>
+          Follows below the version requirements:
+        </p>
+        <table>
+          <thead>
             <tr>
-              <th>Bean</th>
-              <th>Description</th>
+              <th>
+                MyBatis-Caffeine
+              </th>
+              <th>
+                Caffeine
+              </th>
             </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                1.0.0.beta1
+              </td>
+              <td>
+                2.8.0
+              </td>
+            </tr>
+            <tr>
+              <td>
+                1.0.0
+              </td>
+              <td>
+                2.9.x (jdk-8) or 3.0.x (jdk-11)
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </subsection>
+
+      <subsection name="Adapters">
+
+        <p>There are just one Caffeine cache adapters.</p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Bean</th>
+                <th>Description</th>
+              </tr>
             </thead>
             <tbody>
-            <tr>
-              <td><code>org.mybatis.caches.caffeine.CaffeineCache</code></td>
-              <td>No-logging adapter.</td>
-            </tr>
+              <tr>
+                <td><code>org.mybatis.caches.caffeine.CaffeineCache</code></td>
+                <td>No-logging adapter.</td>
+              </tr>
             </tbody>
-            </table>
-            
-            <p>Logging versions of the adapter log cache hit ratios using the namespace as a looger.</p>
-            
-            <p>Please refer to the official
-            <a href="https://github.com/ben-manes/caffeine/wiki">documentation</a>
-            to know more details how to configure Caffeine as Cache.</p>
-            </subsection>
-            
-        </section>
-    </body>
+          </table>
+
+        <p>Logging versions of the adapter log cache hit ratios using the namespace as a looger.</p>
+
+        <p>Please refer to the official
+        <a href="https://github.com/ben-manes/caffeine/wiki">documentation</a>
+                to know more details how to configure Caffeine as Cache.</p>
+      </subsection>
+
+    </section>
+  </body>
 
 </document>
