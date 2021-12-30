@@ -47,8 +47,8 @@
     <url>https://github.com/mybatis/caffeine-cache/issues</url>
   </issueManagement>
   <ciManagement>
-    <system>Travis CI</system>
-    <url>https://travis-ci.org/mybatis/caffeine-cache</url>
+    <system>Github</system>
+    <url>https://github.com/mybatis/caffeine-cache/actions</url>
   </ciManagement>
   <distributionManagement>
     <site>
