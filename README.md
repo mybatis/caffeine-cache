@@ -5,7 +5,7 @@ MyBatis caffeine Extension
 [![Coverage Status](https://coveralls.io/repos/github/mybatis/caffeine-cache/badge.svg?branch=master)](https://coveralls.io/github/mybatis/caffeine-cache?branch=master)
 [![Maven central](https://maven-badges.herokuapp.com/maven-central/org.mybatis.caches/mybatis-caffeine/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.mybatis.caches/mybatis-caffeine)
 [![Sonatype Nexus (Snapshots)](https://img.shields.io/nexus/s/https/oss.sonatype.org/org.mybatis.caches/mybatis-caffeine.svg)](https://oss.sonatype.org/content/repositories/snapshots/org/mybatis/caches/mybatis-caffeine/)
-[![License](http://img.shields.io/:license-apache-brightgreen.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
+[![License](https://img.shields.io/:license-apache-brightgreen.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 
 ![mybatis-logo](http://mybatis.github.io/images/mybatis-logo.png)
 
