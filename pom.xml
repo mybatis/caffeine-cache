@@ -60,6 +60,10 @@
   </distributionManagement>
 
   <properties>
+    <!-- Maven compiler options -->
+    <java.version>11</java.version>
+    <java.release.version>11</java.release.version>
+
     <clirr.comparisonVersion>1.0.0-SNAPSHOT</clirr.comparisonVersion>
     <module.name>org.mybatis.caches.caffeine</module.name>
 
