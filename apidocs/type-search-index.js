@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"org.mybatis.caches.caffeine","l":"CaffeineCache"}]
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"org.mybatis.caches.caffeine","l":"CaffeineCache"}];updateSearchResults();
