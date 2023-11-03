@@ -39,7 +39,7 @@
 
   <scm>
     <url>https://github.com/mybatis/caffeine-cache</url>
-    <connection>scm:git:ssh://github.com/mybatis/caffeine-cache.git</connection>
+    <connection>scm:git:ssh://git@github.com/mybatis/caffeine-cache.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/mybatis/caffeine-cache.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
@@ -53,9 +53,9 @@
   </ciManagement>
   <distributionManagement>
     <site>
-      <id>gh-pages</id>
+      <id>gh-pages-scm</id>
       <name>Mybatis GitHub Pages</name>
-      <url>git:ssh://git@github.com/mybatis/caffeine-cache.git?gh-pages#</url>
+      <url>scm:git:ssh://git@github.com/mybatis/caffeine-cache.git</url>
     </site>
   </distributionManagement>
 
