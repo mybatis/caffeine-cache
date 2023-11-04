@@ -24,7 +24,7 @@
     <groupId>org.mybatis</groupId>
     <artifactId>mybatis-parent</artifactId>
     <version>39</version>
-    <relativePath />
+    <relativePath/>
   </parent>
 
   <groupId>org.mybatis.caches</groupId>
@@ -38,10 +38,10 @@
   <inceptionYear>2016</inceptionYear>
 
   <scm>
-    <url>https://github.com/mybatis/caffeine-cache</url>
     <connection>scm:git:ssh://git@github.com/mybatis/caffeine-cache.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/mybatis/caffeine-cache.git</developerConnection>
     <tag>HEAD</tag>
+    <url>https://github.com/mybatis/caffeine-cache</url>
   </scm>
   <issueManagement>
     <system>GitHub Issue Management</system>
