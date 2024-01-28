@@ -33,7 +33,7 @@
 
   <name>mybatis-caffeine</name>
   <description>Caffeine support for MyBatis Cache</description>
-  <url>https://www.mybatis.org/caches/caffeine/</url>
+  <url>https://www.mybatis.org/caffeine-cache/</url>
 
   <inceptionYear>2016</inceptionYear>
 
@@ -41,7 +41,7 @@
     <connection>scm:git:ssh://git@github.com/mybatis/caffeine-cache.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/mybatis/caffeine-cache.git</developerConnection>
     <tag>HEAD</tag>
-    <url>https://github.com/mybatis/caffeine-cache</url>
+    <url>https://github.com/mybatis/caffeine-cache/</url>
   </scm>
   <issueManagement>
     <system>GitHub Issue Management</system>
