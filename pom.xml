@@ -64,7 +64,7 @@
     <java.version>11</java.version>
     <java.release.version>11</java.release.version>
 
-    <clirr.comparisonVersion>1.0.0-SNAPSHOT</clirr.comparisonVersion>
+    <clirr.comparisonVersion>1.1.0</clirr.comparisonVersion>
     <module.name>org.mybatis.caches.caffeine</module.name>
 
     <!-- Reproducible Builds -->

@@ -8,11 +8,15 @@ on:
   schedule:
     - cron: '43 10 * * 2'
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   analyze:
     name: Analyze
-    runs-on: ${{ (matrix.language == 'swift' && 'macos-latest') || 'ubuntu-latest' }}
-    timeout-minutes: ${{ (matrix.language == 'swift' && 120) || 360 }}
+    runs-on: 'ubuntu-latest'
+    timeout-minutes: 30
     permissions:
       actions: read
       contents: read
@@ -21,29 +25,29 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: [ java, kotlin ]
+        language: [ javascript, java, kotlin ]
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
 
       - name: Setup Java
-        uses: actions/setup-java@v5
+        uses: actions/setup-java@dded0888837ed1f317902acf8a20df0ad188d165 # v5
         with:
           cache: maven
-          java-version: 21
           distribution: 'temurin'
+          java-version: 21
 
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v3
+        uses: github/codeql-action/init@3599b3baa15b485a2e49ef411a7a4bb2452e7f93 # v3
         with:
           languages: ${{ matrix.language }}
           queries: +security-and-quality
 
       - name: Autobuild
-        uses: github/codeql-action/autobuild@v3
+        uses: github/codeql-action/autobuild@3599b3baa15b485a2e49ef411a7a4bb2452e7f93 # v3
 
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v3
+        uses: github/codeql-action/analyze@3599b3baa15b485a2e49ef411a7a4bb2452e7f93 # v3
         with:
           category: "/language:${{ matrix.language }}"
