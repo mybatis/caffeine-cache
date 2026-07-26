@@ -10,8 +10,3 @@ MyBatis caffeine Extension
 ![mybatis-logo](https://mybatis.org/images/mybatis-logo.png)
 
 MyBatis-Caffeine extension Caffeine support for MyBatis Cache.
-
-Essentials
-----------
-
-* [See the docs](https://mybatis.org/caffeine-cache/)
