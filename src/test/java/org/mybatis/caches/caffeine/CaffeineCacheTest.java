@@ -1,5 +1,5 @@
 /*
- *    Copyright 2016-2022 the original author or authors.
+ *    Copyright 2016-2026 the original author or authors.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -17,6 +17,8 @@ package org.mybatis.caches.caffeine;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import java.util.concurrent.locks.ReadWriteLock;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -33,6 +35,30 @@ public class CaffeineCacheTest {
   }
 
   @Test
+  public void blockNullKeyValuePair() {
+    this.cache.putObject(null, null);
+    assertThat(this.cache.getSize()).isEqualTo(0);
+  }
+
+  @Test
+  public void blockNullKey() {
+    this.cache.putObject(null, "foo");
+    assertThat(this.cache.getSize()).isEqualTo(0);
+  }
+
+  @Test
+  public void blockNullValue() {
+    this.cache.putObject(1, null);
+    assertThat(this.cache.getSize()).isEqualTo(0);
+  }
+
+  @Test
+  public void readWriteLockShouldBeNull() {
+    ReadWriteLock readWriteLock = this.cache.getReadWriteLock();
+    assertThat(readWriteLock).isNull();
+  }
+
+  @Test
   public void shouldNotCreateCache() {
     Assertions.assertThrows(IllegalArgumentException.class, () -> {
       this.cache = new CaffeineCache(null);
@@ -41,7 +67,7 @@ public class CaffeineCacheTest {
 
   @Test
   public void shouldVerifyCacheId() {
-    assertThat(DEFAULT_ID).isEqualTo(this.cache.getId());
+    assertThat(this.cache.getId()).isEqualTo(DEFAULT_ID);
   }
 
   @Test
